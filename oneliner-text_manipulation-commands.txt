@@ -37,3 +37,15 @@ cat test.txt | tr ' ' '\n' | sort | uniq
 
 # print lines 3-6 in the file
 head -n 6 test.txt | tail -n 3
+
+# count no of empty line
+grep '^$' test.txt -c
+
+#print sum of size of script file in a specific folder
+ls -l ~/Desktop/study/*.sh | awk '{sum += $5} END {print sum}' 
+
+#Find and print duplicate lines in a file
+sort test.txt | uniq -d
+
+# Print lines between two patterns
+sed -n '/devops/,/error/p' test.txt #--> ',' represent a range between 2 patterns 
