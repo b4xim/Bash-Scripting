@@ -1,0 +1,39 @@
+
+#count no of words
+wc -l test.txt 
+
+#print unique words from the string
+echo -e "apple\nbanana\napple\norange\nbanana" | sort | uniq
+
+#Count of how many times each work appears in file
+cat test.txt | tr ' ' '\n' | sort | uniq -c | sort -rn
+
+#print lines with a specific word
+grep "hello" test.txt
+
+#Print lines that do NOT contain "hello"
+grep -v "hello" test.txt
+
+#print first 3 lines
+head -n 3 test.txt 
+
+#print last 3 lines
+tail -n 3 test.txt 
+
+#replace all occurence of hello to hi
+sed 's/hello/hi/gi'  test.txt     #--> s for substitut, g - for global(All occurences), i - case insensitive
+
+#print line numbers for line containing word "error"
+grep -n "error" test.txt | awk -F':' '{print $1}'
+
+#print longest line in the file
+awk '{ if (length($0) > max) { max = length($0); longest = $0 } } END { print longest }' test.txt
+
+#wordcount in file
+wc -w test.txt
+
+#print all unique words
+cat test.txt | tr ' ' '\n' | sort | uniq
+
+# print lines 3-6 in the file
+head -n 6 test.txt | tail -n 3

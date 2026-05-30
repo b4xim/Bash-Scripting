@@ -1,0 +1,10 @@
+hello world
+hello linux
+devops is fun
+linux is powerful
+hello devops
+error: something failed
+warning: disk usage high
+error: connection timeout
+the quick brown fox
+the lazy dog
